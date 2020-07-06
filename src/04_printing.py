@@ -11,7 +11,10 @@ z = "I like turtles!"
 # Using the printf operator (%), print the following feeding in the values of x,
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
-
+print("Hello, my name is John. I am %i years old. %s and this is Pedro my turtle, he is %2f years old!" % (x, z, y))
 # Use the 'format' string method to print the same thing
+print(f"Hello, my name is John. I am {x} years old. {z} and this is Pedro my turtle, he is {y} years old!")
 
-# Finally, print the same thing using an f-string
+my_string = "Hello, my name is John. I am {} years old. {} and this is Pedro my turtle, he is {} years old!"
+  
+print (my_string.format(x, z, y)) 
