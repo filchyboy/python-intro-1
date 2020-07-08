@@ -30,3 +30,24 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+
+def argument_counter(current_now):
+  if len(sys.argv) > 1:
+    year, month = int(sys.argv[1]), int(sys.argv[2])
+    c = calendar.TextCalendar(calendar.SUNDAY)
+    cal = c.formatmonth(year, month)
+    print(cal)
+    print("Current time: ", current_now)
+  else:
+    c = calendar.TextCalendar(calendar.SUNDAY)
+    cal = c.formatmonth(datetime.now().year, datetime.now().month)
+    print(cal)
+    print("Current time: ", current_now)
+      
+
+#determine todays date
+current_now = datetime.now()
+
+argument_counter(current_now)
+#if no input then render current month calendar
