@@ -24,4 +24,11 @@ print(f.read())
 # then close the file. Open up "bar.txt" and inspect it to make
 # sure that it contains what you expect it to contain
 
-# YOUR CODE HERE
+e = open(os.path.join(__location__, 'bar.txt'), 'w+');
+for i in range(10):
+     e.write("This is line %d\r\n" % (i+1)) 
+e.close() 
+
+f = open(os.path.join(__location__, 'bar.txt'));
+print(f.read())
+
