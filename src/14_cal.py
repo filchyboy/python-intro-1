@@ -31,23 +31,27 @@ import sys
 import calendar
 from datetime import datetime
 
+def current_month():
+  cal = c.formatmonth(datetime.now().year, datetime.now().month)
+  print(cal)
 
 def argument_counter(current_now):
-  if len(sys.argv) > 1:
+  if len(sys.argv) == 3:
     year, month = int(sys.argv[1]), int(sys.argv[2])
-    c = calendar.TextCalendar(calendar.SUNDAY)
+    # TODO: Add checks for validity of dates entered by user
     cal = c.formatmonth(year, month)
     print(cal)
-    print("Current time: ", current_now)
-  else:
-    c = calendar.TextCalendar(calendar.SUNDAY)
-    cal = c.formatmonth(datetime.now().year, datetime.now().month)
+  elif len(sys.argv) == 2:
+    year, month = datetime.now().year, int(sys.argv[1])
+    # TODO: Add checks for validity of dates entered by user
+    cal = c.formatmonth(year, month)
     print(cal)
-    print("Current time: ", current_now)
+  else:
+    current_month()
       
 
 #determine todays date
 current_now = datetime.now()
-
+c = calendar.TextCalendar(calendar.SUNDAY)
 argument_counter(current_now)
 #if no input then render current month calendar
