@@ -33,7 +33,7 @@ class Geocache(Waypoint):
 
 waypoint_1 = Waypoint(name="Catacombs", lat=41.70505, lon=-121.51521)
 
-print("Waypoint 1: ", waypoint_1)
+print("Waypoint 1: ", waypoint_1.name, ",", waypoint_1.lat, ",", waypoint_1.lon)
 
 # Without changing the following line, how can you make it print into something
 # more human-readable? Hint: Look up the `object.__str__` method
@@ -45,7 +45,7 @@ print("Waypoint 1: ", waypoint_1)
 
 waypoint_2 = Geocache(name="Newberry Views", difficulty=1.5, size=2, lat=44.052137, lon=-121.41556)
 
-print("Waypoint 2: ", waypoint_2)
+print("Waypoint 2: ", waypoint_2.name, ",", waypoint_2.difficulty,  waypoint_2.size, ",", waypoint_2.lat, ",", waypoint_2.lon)
 
 # Print it--also make this print more nicely
 # print(geocache)
