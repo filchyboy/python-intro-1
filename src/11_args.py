@@ -46,8 +46,11 @@ def f3(*integers):
         for x in integers:
             total += x+1
     return total
-print("F6: ", f3(1, 2))  # Should print 3
-print("F7: ", f3(8))     # Should print 9
+eight = 8
+one = 1
+two = 2
+print("F6: ", f3(one, two))  # Should print 3
+print("F7: ", f3(eight))     # Should print 9
 
 
 # Write a function f4 that accepts an arbitrary number of keyword arguments and
